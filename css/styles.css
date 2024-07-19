@@ -1,0 +1,388 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* vidro inicio */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.tituloz {
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+	color:chocolate;
+	font-size: 60px;
+	align-content: center;
+	text-decoration-line: line-through;
+	text-decoration-color:cornsilk;
+	text-decoration-style: dotted;
+	text-align: center;
+}
+
+.colored-area {
+    padding: 20px 12px 20px 20px;
+	margin-left: -1%;
+    text-align: center;
+	border-radius: 8px;
+	border-color: transparent;
+	
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.color1 {
+    background-color: #f0f8ff;
+	border-right: 2px solid #91FF00;
+}
+
+.color2 {
+    background-color: #faebd7;
+	border-right: 2px solid #91FF00;
+}
+
+.color3 {
+    background-color: #e6e6fa;
+	border-right: 2px solid #91FF00;
+}
+
+.contento {
+    position: relative;
+    z-index: 1;
+}
+
+.glass-effect {
+    position: absolute;
+    top: 14%;
+    left: 76%;
+    width: 150px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+    color: black; /* Cor do texto */
+}
+
+.glass-effect h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #4B9F39;
+}
+
+.glass-effect p {
+    margin: 10px 0 0;
+}
+
+/* relogio inicio */
+.tempo, .tempo2 {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    text-align: right;
+    text-decoration-color: blue;
+}
+
+.tempo2 {
+    text-shadow: 4px 4px 2px #0BEFDD;
+}
+
+.contador-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+    background-color: #8b4513; /* Tom de madeira antiga */
+    color: yellow;
+    text-align: center;
+    border-radius: 50%; /* mostrador circular */
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); /* Sombra .. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contador-titulo {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: yellow;
+}
+
+.contador {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF61E;
+}
+
+/* sidebar inicio */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0; /* from the left */
+    width: 5%;
+    height: 100%;
+    background: rgba(155, 155, 155, 1);
+    color: yellow;
+    transition: left 0.6s, width 1.2s;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.sidebar-text {
+    display: block;
+    padding: 10px;
+    font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+    font-size: 16px;
+    font-weight: 100;
+    text-shadow: 6px 6px 10px #000000;
+}
+
+.sidebar-image {
+    display: none;
+    width: 60%;
+    height: 20%;
+    margin: 10px auto; 
+    background-image: url('../imagens/Download_Chef__Cook__Wink__Royalty-Free_Vector_Graphic-removebg-preview-removebg-preview.png'); 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    margin-left: 5%; /* sidebar */
+    padding: 10px;
+}
+
+.sidebar:hover {
+    left: -2%; /* Mover sidebar */
+    width: 12%; /* Expandir para 15% */
+    background: rgba(155, 155, 155, 0.2);
+}
+
+.sidebar:hover .sidebar-text {
+    display: none;
+}
+
+.sidebar:hover .sidebar-image {
+    display: block;
+}
+
+/* footer */
+.footer {
+    background-color: forestgreen;
+    padding: 8px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.footer button, .footer a {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 6px;
+}
+
+.footer button:hover {
+    background-color: #cc7a00;
+    transform: translateY(-5px);
+}
+
+.footer button:active {
+    transform: translateY(0);
+}
+
+/* global: estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+    .menu a:not(:first-child) {
+        display: none;
+    }
+
+    .menu a.icon {
+        float: right;
+        display: block;
+    }
+
+    .menu.responsive {
+        position: relative;
+    }
+
+    .menu.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@media (min-width: 900px) {
+    .header {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto;
+    }
+}
+
+/* Adicional: classes e estilos */
+.spacer {
+    height: 40px; /* Ajustar a altura à medida */
+}
+
+.janela1 {
+    width: 35%;
+    border-color: #00FF05;
+    border: thick;
+}
+
+.janela2 {
+    width: 50%;
+    align-content: flex-end;
+    background-color: #FBFFF0;
+}
+
+.casting {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 60px;
+    color: #FF4500;
+    background-color: #FFDA9E;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 6px 6px 10px #FFFFFF;
+}
+
+.intem {
+    margin: 5px;
+    width: 100%;
+}
+
+.menu {
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: #FF8284; /*cor de fundo toda a barra do menu de nav */
+}
+
+.menu a {
+    border-right: 1px solid #91FF00;
+    float: left;
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 25px;
+    font-size: 16px;
+}
+
+.menu a:hover {
+    background-color: #009FE1;
+    color: aliceblue;
+}
+
+.menu a.active {
+    background-color: #87878B;
+    color: aliceblue;
+}
+
+.menu .icon {
+    display: none;
+}
+
+/* Responsivo: estilos menu */
+@media screen and (max-width: 600px) {
+    .menu a:not(:first-child) {
+        display: none;
+    }
+
+    .menu a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu.responsive {
+        position: relative;
+    }
+
+    .menu.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* Rodape2 */
+.rodape2 {
+    height: 1px;
+    background-color: indigo;
+    color: aliceblue;
+    text-align: center;
+    padding: 1px;
+    margin-top: 1px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
